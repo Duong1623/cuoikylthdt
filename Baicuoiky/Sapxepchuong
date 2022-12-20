@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cuoiky
+{
+    class Sapxepchuong: IComparer<Chuong>
+   {
+        public int Compare(Chuong a, Chuong b)
+        {
+            int n = a.Tenchuong.CompareTo(b.Tenchuong);
+            if (n == 0)
+                return a.IDchuong.CompareTo(b.IDchuong);
+            return n;
+        }
+    }
+}
